@@ -1,0 +1,56 @@
+ <!-- Welcome to the FaceTec Browser Sample App
+
+ This sample demonstrates Initialization, Liveness Check, Enrollment, Authentication, Photo ID Match, Customizing the UX, and Getting Audit Trail Images.
+
+ Please use our technical support form to submit questions and issue reports:  https://dev.facetec.com/support -->
+<!DOCTYPE html>
+<head>
+  <title>Browser SDK - Sample App</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i');
+  </style>
+  <link rel="stylesheet" href="./css/style.css?v1">
+  <!-- Add iOS meta tags and icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Browser SDK - Sample App">
+  <script type="text/javascript" src="./build/SampleApp.js"></script>
+</head>
+<body>
+  <div class="wrapping-box-container">
+    <div id="main-interface">
+      <div id="controls">
+        <button id="enroll-button" disabled onclick="SampleApp.checkUniqueness()" class="big-button">Check uniqueness</button>
+        <p id="status">Initializing...</p>
+      </div>
+      <div id="additional-screen" display="flex">
+        <div id="additional-screen-image-and-text">
+          <img id="additional-screen-logo">
+          <h2>Server Upgrade In Progress</h2>
+          <div id="additional-screen-text"></div>
+        </div>
+        <button id="additional-screen-button" class="big-button browser-button">OK</button>
+      </div>
+    </div>
+    <div id="custom-logo-container">
+      <img style="max-width:100px;" src="https://dev.circles.land/logos/circles.png">
+    </div>
+  </div>
+  <footer>
+    <span id="copy-right-section">
+      <p id="copy-right" class="footer-element-margin">&copy; 2021 FaceTec, Inc. &thinsp;&middot;&thinsp; Multiple US & International Patents Granted&thinsp;&middot;&thinsp; All Rights Reserved</p>
+      <hr class="hr display-none footer-element-margin"></hr>
+      <p class="footer-element-margin"><a href="https://dev.facetec.com/policies/terms.html" target="_blank">Terms &amp; Conditions</a>&thinsp;&middot;&thinsp; <a href="https://dev.facetec.com/policies/privacy_site.html" target="_blank">Site Privacy Policy</a>&thinsp;&middot;&thinsp; <a href=https://dev.facetec.com/policies/privacy_sdk.html target="_blank">SDK Privacy Policy</a></p>
+    </span>
+  </footer>
+  <div id="copy-right-length">&copy; 2021 FaceTec, Inc. &thinsp;&middot;&thinsp; Multiple US & International Patents Granted&thinsp;&middot;&thinsp; All Rights Reserved</div>
+  <div class = "loading-session-token-container">
+    <p id="loading-session-token-text">Network Connection Slow...</p>
+  </div>
+  <div id="theme-transition-overlay">
+    <img id="theme-transition-overlay-img" onerror="this.style.display='none'" onload="this.style.display='block'" src="">
+  </div>
+</body>
+</html>
